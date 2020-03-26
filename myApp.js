@@ -114,7 +114,7 @@ app.use(helmet.ieNoOpen());
 // policy we will intercept and restore the header, after inspecting it for testing.
 
 var ninetyDaysInSeconds = 90*24*60*60;
-
+app.use(helmet.hsts({maxAge: ninetyDaysInSeconds, force: true}));
 
 //**Note**:
 // Configuring HTTPS on a custom website requires the acquisition of a domain,
