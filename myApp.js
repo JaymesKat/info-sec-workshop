@@ -144,6 +144,7 @@ app.use(helmet.dnsPrefetchControl());
 // use this option only when there is a real need.
 
 // Use helmet.noCache()
+app.use(helmet.noCache());
 
 
 
